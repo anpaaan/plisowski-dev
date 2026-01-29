@@ -1,163 +1,36 @@
-# plisowski.dev
-
-Personal portfolio website for Pawel Lisowski - Senior Software Engineer.
-
-**Live:** [plisowski.dev](https://plisowski.dev)
-
-## Tech Stack
-
-- **Framework:** Next.js 16 (App Router)
-- **Language:** TypeScript (strict mode)
-- **Styling:** Tailwind CSS 4
-- **Runtime:** React 19
-- **Deployment:** Coolify (self-hosted)
-
-## Features
-
-- Interactive dot grid background with mouse tracking
-- Scroll-triggered reveal animations
-- Animated gradient text effects
-- Responsive design (mobile-first)
-- Performance optimized (passive listeners, tab visibility pause)
-- SEO optimized with meta tags and Open Graph
-
-## Project Structure
-
-```
-src/
-├── app/                    # Next.js App Router pages
-│   ├── page.tsx           # Home page
-│   ├── projects/          # Projects archive page
-│   ├── layout.tsx         # Root layout
-│   └── globals.css        # Global styles
-├── components/
-│   ├── layout/            # Header, SocialLinks
-│   ├── sections/          # Hero, About, Experience, Projects, Contact
-│   └── ui/                # DotGrid, Icons, ScrollReveal
-├── data/
-│   └── content.ts         # All portfolio content (easy to edit)
-└── hooks/
-    └── useScrollReveal.ts # Intersection Observer hook
-```
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 20+
-- npm
-
-### Installation
+First, run the development server:
 
 ```bash
-# Clone the repo
-git clone https://github.com/anpaaan/plisowski-dev.git
-cd plisowski-dev
-
-# Install dependencies
-npm install
-
-# Start development server
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Scripts
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Customization
+## Learn More
 
-All content is centralized in `src/data/content.ts`:
+To learn more about Next.js, take a look at the following resources:
 
-- **personalInfo** - Name, title, location, social links, bio
-- **skills** - Technical skills by category
-- **experience** - Work history
-- **projects** - Featured and other projects
-- **navigation** - Nav menu items
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-To update content, simply edit this file - no need to touch components.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deployment
+## Deploy on Vercel
 
-### Option 1: Coolify (Recommended for Self-Hosting)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-#### 1. Connect GitHub to Coolify
-
-1. Open Coolify dashboard
-2. Go to **Sources** → **+ Add**
-3. Create a new GitHub App (leave org name empty for personal account)
-4. On GitHub, select **Only select repositories** → choose this repo
-5. Click **Install**
-
-#### 2. Create Application
-
-1. **Projects** → **+ Add** (or use existing project)
-2. **+ New** → **Application**
-3. Select your GitHub App as source
-4. Select repository: `anpaaan/plisowski-dev`
-5. Select branch: `main`
-
-#### 3. Configure Build Settings
-
-| Setting | Value |
-|---------|-------|
-| Build Pack | `Nixpacks` |
-| Port | `3000` |
-| Install Command | `npm install` |
-| Build Command | `npm run build` |
-| Start Command | `npm run start` |
-
-#### 4. Set Domain
-
-1. In application settings, find **Domains**
-2. Add your domain (e.g., `plisowski.dev`)
-3. Coolify auto-generates SSL via Let's Encrypt
-
-#### 5. DNS Configuration (Cloudflare)
-
-1. Add A record: `@` → your VPS IP
-2. Enable proxy (orange cloud) recommended
-3. Set SSL mode to **Full (Strict)**
-
-#### 6. Deploy
-
-1. Click **Deploy** in Coolify
-2. Auto-deploy is enabled by default for future pushes
-
-### Option 2: Vercel
-
-```bash
-npm i -g vercel
-vercel
-```
-
-### Option 3: Static Export
-
-```bash
-# Add to next.config.ts: output: 'export'
-npm run build
-# Deploy the 'out' folder to any static host
-```
-
-## Performance
-
-- **Lighthouse Score:** 95+ across all metrics
-- **Canvas animation** pauses when tab is hidden (saves CPU)
-- **Passive event listeners** for scroll/mouse events
-- **Blur placeholders** for images
-- **Static pre-rendering** for all pages
-
-## License
-
-MIT
-
----
-
-Built with Next.js and deployed on Coolify.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
