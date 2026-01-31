@@ -38,7 +38,7 @@ export const experience = [
     ],
   },
   {
-    title: "Software Engineer",
+    title: "Senior Software Engineer",
     company: "British Council",
     companyUrl: "https://www.britishcouncil.org",
     type: "Contract",
