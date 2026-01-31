@@ -15,7 +15,7 @@ export default function Home() {
       <SocialLinks />
       <EmailLink />
 
-      <main className="px-0 lg:px-24 relative z-10">
+      <main className="relative z-10 w-full lg:px-24">
         <Hero />
         <About />
         <Experience />
