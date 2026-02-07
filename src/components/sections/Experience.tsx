@@ -15,16 +15,16 @@ export function Experience() {
       </h2>
 
       <div className="flex flex-col md:flex-row gap-2 sm:gap-4">
-        {/* Tab List */}
-        <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l border-[var(--background-light)] -mx-6 px-6 sm:mx-0 sm:px-0 md:min-w-[180px] md:w-[180px] flex-shrink-0">
+        {/* Tab List — wrapping pills on mobile, vertical sidebar on desktop */}
+        <div className="flex flex-wrap gap-2 mb-2 md:mb-0 md:flex-col md:flex-nowrap md:gap-0 md:border-l border-[var(--background-light)] md:min-w-[180px] md:w-[180px] flex-shrink-0">
           {experience.map((job, index) => (
             <button
               key={job.company}
               onClick={() => setActiveTab(index)}
-              className={`px-3 sm:px-5 py-2.5 sm:py-3 font-mono text-xs sm:text-sm whitespace-nowrap text-left transition-colors hover:bg-[var(--accent-hover)] hover:text-[var(--accent)] md:border-l-2 md:-ml-px ${
+              className={`px-3 py-1.5 md:px-5 md:py-3 font-mono text-xs sm:text-sm whitespace-nowrap transition-colors rounded-full md:rounded-none md:text-left md:border-l-2 md:-ml-px hover:text-[var(--accent)] ${
                 activeTab === index
                   ? "text-[var(--accent)] bg-[var(--accent-hover)] md:border-[var(--accent)]"
-                  : "text-[var(--foreground-muted)] md:border-transparent"
+                  : "text-[var(--foreground-muted)] bg-[var(--background-light)] md:bg-transparent md:border-transparent"
               }`}
             >
               {job.company}
