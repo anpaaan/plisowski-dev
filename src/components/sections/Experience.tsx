@@ -1,15 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { experience } from "@/data/content";
+import { experience, getExperienceHighlights } from "@/data/content";
+import { useTranslation } from "@/lib/i18n";
 
 export function Experience() {
   const [activeTab, setActiveTab] = useState(0);
+  const { locale, t } = useTranslation();
 
   return (
     <section id="experience" className="max-w-4xl mx-auto px-6">
       <h2 className="section-heading before:content-['02.']">
-        Where I&apos;ve Worked
+        {t("experience.heading")}
       </h2>
 
       <div className="flex flex-col md:flex-row gap-2 sm:gap-4">
@@ -30,56 +32,59 @@ export function Experience() {
           ))}
         </div>
 
-        {/* Tab Content */}
-        <div className="py-2 md:pl-6 min-h-[280px] sm:min-h-[320px]">
-          {experience.map((job, index) => (
-            <div
-              key={job.company}
-              className={`${activeTab === index ? "block" : "hidden"}`}
-            >
-              <h3 className="text-base sm:text-xl font-medium text-[var(--foreground)]">
-                <span className="block sm:inline">{job.title}</span>{" "}
-                <a
-                  href={job.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--accent)] hover:underline"
-                >
-                  @ {job.company}
-                </a>
-              </h3>
+        {/* Tab Content — grid overlay so the container height matches the tallest tab */}
+        <div className="py-2 md:pl-6 grid">
+          {experience.map((job, index) => {
+            const highlights = getExperienceHighlights(locale, job.company);
+            return (
+              <div
+                key={job.company}
+                className={`col-start-1 row-start-1 ${activeTab === index ? "visible" : "invisible"}`}
+              >
+                <h3 className="text-base sm:text-xl font-medium text-[var(--foreground)]">
+                  <span className="block sm:inline">{job.title}</span>{" "}
+                  <a
+                    href={job.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--accent)] hover:underline"
+                  >
+                    @ {job.company}
+                  </a>
+                </h3>
 
-              <p className="font-mono text-xs sm:text-sm text-[var(--foreground-muted)] mt-1">
-                {job.period}
-              </p>
-
-              <p className="text-xs sm:text-sm text-[var(--foreground-muted)] mt-1">
-                {job.type} · {job.location}
-              </p>
-
-              {job.clients && (
-                <p className="text-xs sm:text-sm text-[var(--foreground-muted)] mt-1">
-                  Clients:{" "}
-                  <span className="text-[var(--accent)]">
-                    {job.clients.join(", ")}
-                  </span>
+                <p className="font-mono text-xs sm:text-sm text-[var(--foreground-muted)] mt-1">
+                  {job.period}
                 </p>
-              )}
 
-              <ul className="mt-4 sm:mt-5 space-y-2 sm:space-y-3">
-                {job.highlights.map((highlight, i) => (
-                  <li key={i} className="flex gap-2 sm:gap-3">
-                    <span className="text-[var(--accent)] mt-1 sm:mt-1.5 flex-shrink-0 text-sm">
-                      ▹
+                <p className="text-xs sm:text-sm text-[var(--foreground-muted)] mt-1">
+                  {job.type} · {job.location}
+                </p>
+
+                {job.clients && (
+                  <p className="text-xs sm:text-sm text-[var(--foreground-muted)] mt-1">
+                    {t("experience.clientsLabel")}{" "}
+                    <span className="text-[var(--accent)]">
+                      {job.clients.join(", ")}
                     </span>
-                    <span className="text-[var(--foreground-muted)] leading-relaxed text-sm sm:text-base">
-                      {highlight}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                  </p>
+                )}
+
+                <ul className="mt-4 sm:mt-5 space-y-2 sm:space-y-3">
+                  {highlights.map((highlight, i) => (
+                    <li key={i} className="flex gap-2 sm:gap-3">
+                      <span className="text-[var(--accent)] mt-1 sm:mt-1.5 flex-shrink-0 text-sm">
+                        ▹
+                      </span>
+                      <span className="text-[var(--foreground-muted)] leading-relaxed text-sm sm:text-base">
+                        {highlight}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

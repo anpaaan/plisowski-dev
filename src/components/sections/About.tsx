@@ -1,17 +1,22 @@
+"use client";
+
 import Image from "next/image";
-import { personalInfo, skills } from "@/data/content";
+import { skills } from "@/data/content";
+import { useTranslation } from "@/lib/i18n";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function About() {
+  const { t, messages } = useTranslation();
+
   return (
     <section id="about" className="max-w-4xl mx-auto px-6">
       <ScrollReveal>
-        <h2 className="section-heading before:content-['01.']">About Me</h2>
+        <h2 className="section-heading before:content-['01.']">{t("about.heading")}</h2>
       </ScrollReveal>
 
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
         <div className="md:col-span-2 space-y-4 order-2 md:order-1">
-          {personalInfo.aboutParagraphs.map((paragraph, index) => (
+          {messages.about.paragraphs.map((paragraph, index) => (
             <p
               key={index}
               className="text-[var(--foreground-muted)] leading-relaxed text-sm sm:text-base"
@@ -21,7 +26,7 @@ export function About() {
           ))}
 
           <p className="text-[var(--foreground-muted)] leading-relaxed pt-2 text-sm sm:text-base">
-            Here are some technologies I&apos;ve been working with:
+            {t("about.techIntro")}
           </p>
 
           <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-2">
@@ -62,7 +67,7 @@ export function About() {
       {/* Skills Section */}
       <div className="mt-10 sm:mt-16">
         <h3 className="text-lg sm:text-xl font-semibold text-[var(--foreground)] mb-4 sm:mb-6">
-          Technical Skills
+          {t("about.skillsHeading")}
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           <SkillCategory title="Frontend" items={skills.frontend} />

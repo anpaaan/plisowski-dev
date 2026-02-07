@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { LocaleProvider } from "@/lib/i18n";
 import "./globals.css";
 
 const inter = Inter({
@@ -171,9 +172,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased overflow-x-hidden`}
       >
-        <div className="w-full max-w-full overflow-x-hidden">
-          {children}
-        </div>
+        <LocaleProvider>
+          <div className="w-full max-w-full overflow-x-hidden">
+            {children}
+          </div>
+        </LocaleProvider>
       </body>
     </html>
   );

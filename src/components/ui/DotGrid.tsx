@@ -31,6 +31,24 @@ function seededRandom(seed: number) {
   return x - Math.floor(x);
 }
 
+// Star density breakpoints
+function getStarCounts(screenWidth: number) {
+  if (screenWidth < 768) {
+    // Mobile
+    return { visible: 140, hidden: 80 };
+  } else if (screenWidth < 1280) {
+    // Tablet
+    return { visible: 220, hidden: 130 };
+  } else {
+    // Desktop
+    return { visible: 320, hidden: 200 };
+  }
+}
+
+function getTelescopeRadius() {
+  return "ontouchstart" in window ? 150 : 120;
+}
+
 export function DotGrid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: -1000, y: -1000 });
@@ -50,9 +68,8 @@ export function DotGrid() {
     let height = window.innerHeight;
 
     // Config
-    const TELESCOPE_RADIUS = 120;
-    const VISIBLE_STAR_COUNT = 280;
-    const HIDDEN_STAR_COUNT = 180;
+    let TELESCOPE_RADIUS = getTelescopeRadius();
+    let { visible: VISIBLE_STAR_COUNT, hidden: HIDDEN_STAR_COUNT } = getStarCounts(width);
     const BRIGHT_STAR_CHANCE = 0.04; // 4% of stars are bright
     const TARGET_FPS = 24;
     const FRAME_INTERVAL = 1000 / TARGET_FPS;
@@ -113,6 +130,8 @@ export function DotGrid() {
       height = window.innerHeight;
       canvas.width = width;
       canvas.height = height;
+      ({ visible: VISIBLE_STAR_COUNT, hidden: HIDDEN_STAR_COUNT } = getStarCounts(width));
+      TELESCOPE_RADIUS = getTelescopeRadius();
       generateStars();
 
       if (!isRunningRef.current) {
@@ -125,6 +144,20 @@ export function DotGrid() {
     };
 
     const handleMouseLeave = () => {
+      mouseRef.current = { x: -1000, y: -1000 };
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      mouseRef.current = { x: touch.clientX, y: touch.clientY };
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      mouseRef.current = { x: touch.clientX, y: touch.clientY };
+    };
+
+    const handleTouchEnd = () => {
       mouseRef.current = { x: -1000, y: -1000 };
     };
 
@@ -275,6 +308,9 @@ export function DotGrid() {
     resize();
     window.addEventListener("resize", resize, { passive: true });
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
     document.addEventListener("mouseleave", handleMouseLeave);
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
@@ -283,6 +319,9 @@ export function DotGrid() {
     return () => {
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
       document.removeEventListener("mouseleave", handleMouseLeave);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       cancelAnimationFrame(animationRef.current);

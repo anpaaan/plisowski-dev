@@ -1,16 +1,20 @@
+"use client";
+
 import Link from "next/link";
-import { projects } from "@/data/content";
+import { projects, getProjectDescription } from "@/data/content";
+import { useTranslation } from "@/lib/i18n";
 import { GitHubIcon, ExternalLinkIcon, FolderIcon } from "@/components/ui/Icons";
 import { ProjectImage } from "@/components/ui/ProjectImage";
 
 export function Projects() {
+  const { locale, t } = useTranslation();
   const featuredProjects = projects.filter((p) => p.featured);
   const otherProjects = projects.filter((p) => !p.featured);
 
   return (
     <section id="projects" className="max-w-5xl mx-auto px-6">
       <h2 className="section-heading before:content-['03.']">
-        Some Things I&apos;ve Built
+        {t("projects.heading")}
       </h2>
 
       {/* Featured Projects */}
@@ -19,51 +23,69 @@ export function Projects() {
           <FeaturedProject
             key={project.title}
             project={project}
+            description={getProjectDescription(locale, project.title)}
             isEven={index % 2 === 0}
+            featuredLabel={t("projects.featured")}
+            liveLabel={t("projects.live")}
+            comingSoonLabel={t("projects.comingSoon")}
           />
         ))}
       </div>
 
-      {/* Other Projects */}
-      <div className="mt-16 sm:mt-24 md:mt-32">
-        <h3 className="text-xl sm:text-2xl font-semibold text-[var(--foreground)] text-center mb-8 sm:mb-12">
-          Other Noteworthy Projects
-        </h3>
+      {/* TODO: Restore "Other Noteworthy Projects" section and "View Full Project Archive" link when more projects are ready */}
+      {otherProjects.length > 0 && (
+        <div className="mt-16 sm:mt-24 md:mt-32">
+          <h3 className="text-xl sm:text-2xl font-semibold text-[var(--foreground)] text-center mb-8 sm:mb-12">
+            {t("projects.otherHeading")}
+          </h3>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-          {otherProjects.map((project) => (
-            <OtherProject key={project.title} project={project} />
-          ))}
-        </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            {otherProjects.map((project) => (
+              <OtherProject
+                key={project.title}
+                project={project}
+                description={getProjectDescription(locale, project.title)}
+              />
+            ))}
+          </div>
 
-        <div className="mt-8 sm:mt-12 text-center">
-          <Link
-            href="/projects"
-            className="inline-block border border-[var(--accent)] text-[var(--accent)] px-6 py-2.5 sm:py-3 rounded font-mono text-xs sm:text-sm hover:bg-[var(--accent-hover)] transition-colors"
-          >
-            View Full Project Archive
-          </Link>
+          <div className="mt-8 sm:mt-12 text-center">
+            <Link
+              href="/projects"
+              className="inline-block border border-[var(--accent)] text-[var(--accent)] px-6 py-2.5 sm:py-3 rounded font-mono text-xs sm:text-sm hover:bg-[var(--accent-hover)] transition-colors"
+            >
+              {t("projects.viewArchive")}
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
 
-interface Project {
+interface ProjectData {
   title: string;
-  description: string;
   tech: string[];
   github?: string;
   external?: string;
   image?: string;
+  status?: "live" | "coming-soon";
 }
 
 function FeaturedProject({
   project,
+  description,
   isEven,
+  featuredLabel,
+  liveLabel,
+  comingSoonLabel,
 }: {
-  project: Project;
+  project: ProjectData;
+  description: string;
   isEven: boolean;
+  featuredLabel: string;
+  liveLabel: string;
+  comingSoonLabel: string;
 }) {
   return (
     <div className="relative">
@@ -103,7 +125,7 @@ function FeaturedProject({
           className={`md:col-span-6 ${isEven ? "md:col-start-6 md:text-right" : "md:col-start-1 md:text-left"} md:row-start-1 relative z-10`}
         >
           <p className="font-mono text-xs sm:text-sm text-[var(--accent)] mb-1">
-            Featured Project
+            {featuredLabel}
           </p>
           <h3 className="text-lg sm:text-2xl font-semibold text-[var(--foreground)] mb-3 sm:mb-4">
             <a
@@ -114,11 +136,21 @@ function FeaturedProject({
             >
               {project.title}
             </a>
+            {project.status === "live" && (
+              <span className="text-[10px] sm:text-xs bg-green-500/20 text-green-400 px-1.5 sm:px-2 py-0.5 rounded font-mono font-normal align-middle ml-2">
+                {liveLabel}
+              </span>
+            )}
+            {project.status === "coming-soon" && (
+              <span className="text-[10px] sm:text-xs bg-[var(--accent)]/20 text-[var(--accent)] px-1.5 sm:px-2 py-0.5 rounded font-mono font-normal align-middle ml-2">
+                {comingSoonLabel}
+              </span>
+            )}
           </h3>
 
           <div className="bg-[var(--background-light)] p-4 sm:p-6 rounded-lg shadow-xl">
             <p className="text-[var(--foreground-muted)] leading-relaxed text-sm sm:text-base">
-              {project.description}
+              {description}
             </p>
           </div>
         </div>
@@ -170,7 +202,7 @@ function FeaturedProject({
   );
 }
 
-function OtherProject({ project }: { project: Project }) {
+function OtherProject({ project, description }: { project: ProjectData; description: string }) {
   return (
     <div className="bg-[var(--background-light)] p-4 sm:p-6 rounded-lg hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full">
       <div className="flex justify-between items-start mb-4 sm:mb-6">
@@ -212,7 +244,7 @@ function OtherProject({ project }: { project: Project }) {
       </h4>
 
       <p className="text-[var(--foreground-muted)] text-xs sm:text-sm leading-relaxed flex-grow mb-3 sm:mb-4">
-        {project.description}
+        {description}
       </p>
 
       <ul className="flex flex-wrap gap-1.5 sm:gap-2 font-mono text-[10px] sm:text-xs text-[var(--foreground-muted)]">

@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "about": "O mnie",
+    "experience": "Doświadczenie",
+    "projects": "Projekty",
+    "contact": "Kontakt",
+    "resume": "CV"
+  },
+  "hero": {
+    "greeting": "Cześć, nazywam się",
+    "tagline": "Tworzę aplikacje webowe.",
+    "summary": "Buduję skalowalne aplikacje full-stack. Z ponad 8-letnim doświadczeniem w środowiskach korporacyjnych w branży farmaceutycznej, lotniczej i finansowej, specjalizuję się w tworzeniu wydajnych systemów z wykorzystaniem nowoczesnych technologii.",
+    "currentRole": "Obecnie w",
+    "cta": "Zobacz moje projekty"
+  },
+  "about": {
+    "heading": "O mnie",
+    "techIntro": "Technologie, z którymi pracuję na co dzień:",
+    "skillsHeading": "Umiejętności techniczne",
+    "paragraphs": [
+      "Jestem Senior Software Engineerem, który lubi tworzyć rzeczy żyjące w sieci. Programowania uczę się od 14. roku życia, a po ukończeniu studiów w Waterford w Irlandii w 2016 roku rozpocząłem karierę w Fenergo w Dublinie jako Software Engineer in Test — co szybko przerodziło się w rozwój full-stack.",
+      "W 2017 roku przeprowadziłem się do Gdyni, aby realizować ciekawsze projekty jako software engineer. Od tego czasu miałem przyjemność współpracować z dużymi organizacjami, w tym Novartis, British Council, Lufthansa Systems, oraz klientami takimi jak Boeing, Danfoss i Signal Ocean. Obecnie skupiam się na projektowaniu dashboardów analitycznych i pipeline'ów danych dostarczających insighty w czasie rzeczywistym.",
+      "Poza pracą dla klientów, rozwijam produkty integrujące generatywną AI i autonomicznych agentów w workflow zespołów deweloperskich. Kiedy nie koduję, eksploruję nowe technologie lub kontrybuuję do projektów open-source."
+    ]
+  },
+  "experience": {
+    "heading": "Doświadczenie zawodowe",
+    "clientsLabel": "Klienci:",
+    "highlights": {
+      "Novartis": [
+        "Zaprojektowałem dashboard analityki finansowej dla kadry zarządzającej z użyciem React/TypeScript, Java/Spring Boot i Python/FastAPI, dostarczający insighty w czasie rzeczywistym dla stakeholderów na poziomie dyrektorskim w globalnych operacjach farmaceutycznych",
+        "Opracowałem pipeline'y danych przetwarzające miliony rekordów finansowych dziennie, poprawiając wydajność pobierania danych o 40% poprzez optymalizację zapytań i strategiczne indeksowanie",
+        "Zbudowałem interaktywne komponenty wizualizacji danych z Recharts i D3.js, prezentujące złożone trendy wydatków R&D i analitykę kosztów badań klinicznych",
+        "Zaprojektowałem modularną architekturę komponentów z dokumentacją w Storybook, umożliwiającą szybki rozwój funkcji w 4 rozproszonych zespołach",
+        "Wdrożyłem konteneryzację Docker i workflow deploymentu GCP Cloud Run z automatycznymi rollbackami, skracając czas deploymentu o 50%",
+        "Opracowałem system kontroli dostępu oparty na rolach z OAuth 2.0 i JWT, zapewniający bezpieczny dostęp do wrażliwych danych finansowych w hierarchiach organizacyjnych"
+      ],
+      "British Council": [
+        "Budowałem i utrzymywałem aplikacje React/Node.js wspierające globalne usługi edukacyjne, w tym systemy rejestracji na egzaminy z ponad 100 tys. aktywnych użytkowników miesięcznie",
+        "Opracowałem system planowania i rezerwacji egzaminów obsługujący szczytowy ruch podczas okresów rejestracji IELTS z zerowym downtime'em",
+        "Zaprojektowałem skalowalne mikroserwisy backendowe w Java/Spring Boot wdrożone na AWS ECS, osiągając 99,9% uptime w okresach wysokiego zapotrzebowania",
+        "Wdrożyłem bramkę GraphQL API ujednolicającą dostęp do danych w 6 mikroserwisach, redukując złożoność pobierania danych po stronie frontendu o 40%",
+        "Zoptymalizowałem zapytania PostgreSQL i wdrożyłem warstwę cache'owania Redis, skracając czasy odpowiedzi API o 60% dla często używanych endpointów",
+        "Zbudowałem kompleksowy zestaw testów z Jest i Playwright, osiągając 85% pokrycia kodu i umożliwiając pewny continuous deployment"
+      ],
+      "Lufthansa Systems": [
+        "Rozwijałem platformę efektywności paliwowej w Angular/Java, obliczającą metryki zużycia i strategie optymalizacji kosztów dla głównych klientów linii lotniczych",
+        "Zbudowałem dashboardy analityki lotów w czasie rzeczywistym przetwarzające ponad 15 000 dziennych rekordów lotów, umożliwiając podejmowanie decyzji opartych na danych dla zarządzania flotą",
+        "Zintegrowałem zewnętrzne źródła danych lotniczych, w tym API pogodowe i feedy NOTAM, w celu ulepszenia prognoz zużycia paliwa i planowania tras",
+        "Zaprojektowałem API RESTful w Spring Boot obsługujące złożone obliczenia planów lotu i analitykę wydajności dla zespołów operacyjnych",
+        "Wdrożyłem pipeline'y CI/CD z Jenkins, Ansible i bramkami jakości SonarQube, skracając czas deploymentu o 40% przy jednoczesnej poprawie jakości kodu",
+        "Współpracowałem bezpośrednio ze specjalistami ds. operacji lotniczych, przekładając złożone wymagania domenowe na intuicyjne rozwiązania techniczne"
+      ],
+      "Jit Team": [
+        "Dostarczałem rozwiązania frontendowe i full-stack dla klientów korporacyjnych z sektorów lotnictwa, logistyki morskiej i produkcji przemysłowej",
+        "Zbudowałem dashboardy IoT przemysłowego w React/NestJS dla Danfoss, przetwarzające telemetrię z ponad 500 urządzeń HVAC i chłodniczych w czasie rzeczywistym przez WebSocket",
+        "Rozwijałem aplikacje Angular/Java dla platformy planowania lotów Jeppesen, implementując przetwarzanie danych nawigacyjnych i funkcje optymalizacji tras",
+        "Zbudowałem frontend React i backend Python/FastAPI dla platformy analityki morskiej Signal Ocean, śledzącej pozycje statków i dane rynku frachtowego w czasie rzeczywistym",
+        "Wdrożyłem architekturę sterowaną zdarzeniami z Kafka do przetwarzania strumieni danych sensorycznych o wysokim wolumenie z wymaganiami opóźnień poniżej sekundy",
+        "Ustanowiłem praktyki testowania frontendu i biblioteki komponentów z Jest i Cypress, redukując błędy regresji o 35% w projektach klientów"
+      ],
+      "Fenergo": [
+        "Opracowałem frameworki automatycznych testów z użyciem C# i Selenium dla korporacyjnego oprogramowania KYC/AML służącego globalnym instytucjom finansowym",
+        "Zbudowałem zestawy testów regresji pokrywające krytyczne workflow onboardingu klientów, redukując nakład testowania manualnego o 60% i przyspieszając cykle wydawnicze",
+        "Współpracowałem z interdyscyplinarnymi zespołami deweloperskimi nad wdrożeniem praktyk shift-left testing, wykrywając defekty wcześniej w cyklu rozwoju"
+      ]
+    }
+  },
+  "projects": {
+    "heading": "Wybrane projekty",
+    "featured": "Projekt wyróżniony",
+    "live": "Na żywo",
+    "comingSoon": "Wkrótce",
+    "otherHeading": "Pozostałe projekty",
+    "viewArchive": "Zobacz pełne archiwum projektów",
+    "descriptions": {
+      "Skeech": "Open-source'owy sandbox do projektowania AI dla deweloperów. Generuj komponenty React/shadcn/Tailwind w języku naturalnym, iteruj z podglądem na żywo i eksportuj do swoich projektów. Wsparcie wielu providerów (Claude, OpenAI, Ollama), zero-knowledge security — dane uwierzytelniające LLM nigdy nie trafiają na serwer.",
+      "Lisium": "Hub do rozwoju produktów oparty na AI, łączący planowanie, projektowanie i współpracę. Widoki oparte na rolach (Architekt, PO, Developer, Designer, Tester) z agentami AI odpowiadającymi z każdej perspektywy. Workspace sterowany promptami do user stories, designów, dokumentacji i zadań.",
+      "Bystr": "Platforma analityki produktowej oparta na LLM. Dodaj jeden skrypt, aby automatycznie zbierać wszystko — AI identyfikuje i nazywa elementy strony, buduje wizualne mapy witryny i pozwala odpytywać dane w języku naturalnym. Replay sesji z podsumowaniami AI, analiza lejków z wyjaśnieniami drop-offów i wykrywanie anomalii."
+    }
+  },
+  "contact": {
+    "preHeading": "04. Co dalej?",
+    "heading": "Skontaktuj się",
+    "body": "Jestem otwarty na nowe możliwości i zawsze chętnie dowiaduję się o ciekawych projektach. Niezależnie czy masz pytanie, chcesz współpracować, czy po prostu się przywitać — śmiało napisz!",
+    "linkedin": "Połącz się na LinkedIn",
+    "github": "Zobacz GitHub",
+    "location": "Lokalizacja:",
+    "credit": "Zbudowane z Next.js i Tailwind CSS"
+  },
+  "projectsPage": {
+    "back": "← Powrót na stronę główną",
+    "heading": "Wszystkie projekty",
+    "description": "Zbiór projektów, które zbudowałem na przestrzeni lat. Niektóre to aplikacje produkcyjne, inne to eksperymenty i projekty edukacyjne.",
+    "year": "Rok",
+    "project": "Projekt",
+    "builtWith": "Technologie",
+    "links": "Linki",
+    "detailsHeading": "Szczegóły projektów",
+    "code": "Kod",
+    "liveLinkLabel": "Na żywo"
+  },
+  "social": {
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "getInTouch": "Napisz do mnie"
+  }
+}
