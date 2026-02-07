@@ -21,7 +21,22 @@ export function About() {
               key={index}
               className="text-[var(--foreground-muted)] leading-relaxed text-sm sm:text-base"
             >
-              {paragraph}
+              {paragraph.includes("Lisovate") ? (
+                <>
+                  {paragraph.split("Lisovate")[0]}
+                  <a
+                    href="https://lisovate.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--accent)] hover:underline"
+                  >
+                    Lisovate
+                  </a>
+                  {paragraph.split("Lisovate")[1]}
+                </>
+              ) : (
+                paragraph
+              )}
             </p>
           ))}
 
