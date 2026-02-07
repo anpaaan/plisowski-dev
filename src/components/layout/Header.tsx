@@ -21,7 +21,7 @@ function LanguageToggle() {
     <div className="flex items-center font-mono text-sm gap-1">
       <button
         onClick={() => setLocale("en")}
-        className={`cursor-pointer px-1.5 py-0.5 rounded transition-colors ${
+        className={`cursor-pointer px-1.5 rounded transition-colors ${
           locale === "en"
             ? "text-[var(--accent)]"
             : "text-[var(--foreground-muted)] hover:text-[var(--foreground)]"
@@ -32,7 +32,7 @@ function LanguageToggle() {
       <span className="text-[var(--foreground-muted)]">|</span>
       <button
         onClick={() => setLocale("pl")}
-        className={`cursor-pointer px-1.5 py-0.5 rounded transition-colors ${
+        className={`cursor-pointer px-1.5 rounded transition-colors ${
           locale === "pl"
             ? "text-[var(--accent)]"
             : "text-[var(--foreground-muted)] hover:text-[var(--foreground)]"
@@ -79,7 +79,7 @@ export function Header() {
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-6">
+          <ul className="hidden lg:flex items-baseline gap-6 leading-normal">
             {nav.map((item, index) => (
               <li key={item.href}>
                 <a
@@ -96,7 +96,7 @@ export function Header() {
             </li>
             <li>
               <a
-                href="/resume.pdf"
+                href="/pawel_lisowski_cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-[var(--accent)] text-[var(--accent)] px-4 py-2 rounded font-mono text-sm hover:bg-[var(--accent-hover)] transition-colors min-w-[6rem] text-center inline-block"
@@ -150,7 +150,7 @@ export function Header() {
               style={{ animationDelay: `${(nav.length + 1) * 75}ms` }}
             >
               <a
-                href="/resume.pdf"
+                href="/pawel_lisowski_cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-[var(--accent)] text-[var(--accent)] px-10 py-3 rounded font-mono text-lg hover:bg-[var(--accent)]/10 hover:shadow-[0_0_20px_rgba(251,191,36,0.3)] transition-all duration-300 min-w-[10rem] text-center inline-block"
