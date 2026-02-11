@@ -76,7 +76,7 @@
     "descriptions": {
       "Skeech": "Open-source AI design sandbox for developers. Generate React/shadcn/Tailwind components through natural language, iterate with live preview, and export to your projects. Multi-provider support (Claude, OpenAI, Ollama), zero-knowledge security — LLM credentials never touch the server.",
       "Lisium": "AI-powered product development hub that unifies planning, design, and collaboration. Role-based views (Architect, PO, Developer, Designer, Tester) with AI agents that respond from each perspective. Prompt-driven workspace for user stories, designs, docs, and tasks.",
-      "Bystr": "LLM-powered product analytics platform. Drop in one script to auto-capture everything — the AI identifies and names page elements, builds visual sitemaps, and lets you query data in plain English. Session replay with AI summaries, funnel analysis with drop-off explanations, and anomaly detection."
+      "Zorvid": "LLM-powered product analytics platform. Drop in one script to auto-capture everything — the AI identifies and names page elements, builds visual sitemaps, and lets you query data in plain English. Session replay with AI summaries, funnel analysis with drop-off explanations, and anomaly detection."
     }
   },
   "contact": {

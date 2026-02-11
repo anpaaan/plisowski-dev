@@ -83,10 +83,10 @@ export const projects = [
     status: "coming-soon" as const,
   },
   {
-    title: "Bystr",
+    title: "Zorvid",
     tech: ["Next.js", "TypeScript", "Java", "Spring Boot", "PostgreSQL", "LLM"],
-    external: "https://bystr.io",
-    image: "/images/projects/bystr.webp",
+    external: "https://zorvid.io",
+    image: "/images/projects/zorvid.webp",
     featured: true,
     status: "coming-soon" as const,
   },

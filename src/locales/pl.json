@@ -76,7 +76,7 @@
     "descriptions": {
       "Skeech": "Open-source'owy sandbox do projektowania AI dla deweloperów. Generuj komponenty React/shadcn/Tailwind w języku naturalnym, iteruj z podglądem na żywo i eksportuj do swoich projektów. Wsparcie wielu providerów (Claude, OpenAI, Ollama), zero-knowledge security — dane uwierzytelniające LLM nigdy nie trafiają na serwer.",
       "Lisium": "Hub do rozwoju produktów oparty na AI, łączący planowanie, projektowanie i współpracę. Widoki oparte na rolach (Architekt, PO, Developer, Designer, Tester) z agentami AI odpowiadającymi z każdej perspektywy. Workspace sterowany promptami do user stories, designów, dokumentacji i zadań.",
-      "Bystr": "Platforma analityki produktowej oparta na LLM. Dodaj jeden skrypt, aby automatycznie zbierać wszystko — AI identyfikuje i nazywa elementy strony, buduje wizualne mapy witryny i pozwala odpytywać dane w języku naturalnym. Replay sesji z podsumowaniami AI, analiza lejków z wyjaśnieniami drop-offów i wykrywanie anomalii."
+      "Zorvid": "Platforma analityki produktowej oparta na LLM. Dodaj jeden skrypt, aby automatycznie zbierać wszystko — AI identyfikuje i nazywa elementy strony, buduje wizualne mapy witryny i pozwala odpytywać dane w języku naturalnym. Replay sesji z podsumowaniami AI, analiza lejków z wyjaśnieniami drop-offów i wykrywanie anomalii."
     }
   },
   "contact": {
