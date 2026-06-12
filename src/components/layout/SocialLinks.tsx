@@ -2,7 +2,7 @@
 
 import { personalInfo } from "@/data/content";
 import { useTranslation } from "@/lib/i18n";
-import { GitHubIcon, LinkedInIcon } from "@/components/ui/Icons";
+import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/ui/Icons";
 
 export function SocialLinks() {
   const { t } = useTranslation();
@@ -26,6 +26,15 @@ export function SocialLinks() {
         aria-label={t("social.linkedinLabel")}
       >
         <LinkedInIcon />
+      </a>
+      <a
+        href={personalInfo.x}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[var(--foreground-muted)] hover:text-[var(--accent)] hover:-translate-y-1 transition-all"
+        aria-label={t("social.xLabel")}
+      >
+        <XIcon className="w-5 h-5" />
       </a>
     </div>
   );

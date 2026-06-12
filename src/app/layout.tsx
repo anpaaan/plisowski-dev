@@ -95,7 +95,7 @@ const jsonLd = {
       givenName: "Pawel",
       familyName: "Lisowski",
       url: "https://plisowski.dev",
-      image: "https://plisowski.dev/images/profile-optimized.webp",
+      image: "https://plisowski.dev/images/profile.jpg",
       jobTitle: "Senior Software Engineer",
       worksFor: {
         "@type": "Organization",

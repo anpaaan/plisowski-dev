@@ -62,10 +62,10 @@ export function About() {
           <div className="flex justify-center md:justify-start order-1 md:order-2 mb-6 md:mb-0">
             <div className="relative group w-fit max-w-[200px] sm:max-w-[250px]">
               <Image
-                src="/images/profile-optimized.webp"
+                src="/images/profile.jpg"
                 alt="Pawel Lisowski - Senior Software Engineer in Gdynia, Poland"
-                width={250}
-                height={337}
+                width={400}
+                height={400}
                 className="relative z-10 rounded-lg block transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(100,255,218,0.3)] w-full h-auto"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgcI/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDBAURAAYSIQcTMUH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhQf/aAAwDAQACEQMRAD8AmW3No0FfYLfX1V3uMU9RTxzyIscJVWZQSAef4Ca+xrRb6WhpaSluFwkipokhjaSOMsyqoAJI+k4GuNIvI5FfROZT/9k="

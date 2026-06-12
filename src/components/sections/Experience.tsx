@@ -15,7 +15,7 @@ export function Experience() {
       </h2>
 
       <div className="flex flex-col md:flex-row gap-2 sm:gap-4">
-        {/* Tab List — wrapping pills on mobile, vertical sidebar on desktop */}
+        {/* Tab List: wrapping pills on mobile, vertical sidebar on desktop */}
         <div className="flex flex-wrap gap-2 mb-2 md:mb-0 md:flex-col md:flex-nowrap md:gap-0 md:border-l border-[var(--background-light)] md:min-w-[180px] md:w-[180px] flex-shrink-0">
           {experience.map((job, index) => (
             <button
@@ -32,7 +32,7 @@ export function Experience() {
           ))}
         </div>
 
-        {/* Tab Content — grid overlay so the container height matches the tallest tab */}
+        {/* Tab Content: grid overlay so the container height matches the tallest tab */}
         <div className="py-2 md:pl-6 grid">
           {experience.map((job, index) => {
             const highlights = getExperienceHighlights(locale, job.company);

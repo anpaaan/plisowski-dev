@@ -41,7 +41,7 @@ export function Hero() {
 
       <div className="fade-in-up opacity-0 delay-400">
         <a
-          href="#projects"
+          href="#studio"
           className="inline-block border border-[var(--accent)] text-[var(--accent)] px-5 sm:px-7 py-3 sm:py-4 rounded font-mono text-sm sm:text-base hover:bg-[var(--accent-hover)] transition-all glow"
         >
           {t("hero.cta")}

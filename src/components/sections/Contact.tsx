@@ -2,7 +2,7 @@
 
 import { personalInfo } from "@/data/content";
 import { useTranslation } from "@/lib/i18n";
-import { GitHubIcon, LinkedInIcon } from "@/components/ui/Icons";
+import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/ui/Icons";
 
 export function Contact() {
   const { t } = useTranslation();
@@ -38,6 +38,16 @@ export function Contact() {
         >
           <GitHubIcon className="w-4 h-4 sm:w-5 sm:h-5" />
           {t("contact.github")}
+        </a>
+
+        <a
+          href={personalInfo.x}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-[var(--foreground-muted)] hover:text-[var(--accent)] transition-colors font-mono text-sm sm:text-base py-2"
+        >
+          <XIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+          {t("contact.x")}
         </a>
       </div>
 

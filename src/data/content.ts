@@ -10,6 +10,13 @@ export const personalInfo = {
   location: "Gdynia, Poland",
   linkedin: "https://linkedin.com/in/paweljlisowski",
   github: "https://github.com/anpaaan",
+  x: "https://x.com/PawelJLisowski",
+};
+
+export const studio = {
+  name: "Lisovate",
+  url: "https://lisovate.com",
+  products: ["Skeech", "Lisium", "Zorvid"],
 };
 
 export const skills = {
@@ -90,7 +97,7 @@ export const projects = [
     featured: true,
     status: "coming-soon" as const,
   },
-  // TODO: Uncomment and update these projects later — add proper descriptions, links, and images
+  // TODO: Uncomment and update these projects later: add proper descriptions, links, and images
   // See also: /projects archive page needs updating when these are restored
   // {
   //   title: "Gawra",
@@ -132,7 +139,7 @@ export function getNavigation(locale: Locale) {
   return [
     { name: m.nav.about, href: "#about" },
     { name: m.nav.experience, href: "#experience" },
-    { name: m.nav.projects, href: "#projects" },
+    { name: m.nav.studio, href: "#studio" },
     { name: m.nav.contact, href: "#contact" },
   ];
 }
@@ -151,6 +158,6 @@ export function getProjectDescription(locale: Locale, title: string): string {
 export const navigation = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
+  { name: "Studio", href: "#studio" },
   { name: "Contact", href: "#contact" },
 ];

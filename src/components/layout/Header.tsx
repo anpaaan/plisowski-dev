@@ -10,7 +10,7 @@ import { MenuIcon, CloseIcon } from "@/components/ui/Icons";
 const NAV_MIN_WIDTHS = [
   "min-w-[11ch]", // max("01. About", "01. O mnie") = 10ch + buffer
   "min-w-[18ch]", // max("02. Experience", "02. Doświadczenie") = 17ch + buffer
-  "min-w-[13ch]", // max("03. Projects", "03. Projekty") = 12ch + buffer
+  "min-w-[11ch]", // max("03. Studio", "03. Studio") = 10ch + buffer
   "min-w-[12ch]", // max("04. Contact", "04. Kontakt") = 11ch + buffer
 ];
 

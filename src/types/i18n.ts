@@ -5,6 +5,7 @@ export interface Messages {
     about: string;
     experience: string;
     projects: string;
+    studio: string;
     contact: string;
     resume: string;
   };
@@ -35,12 +36,20 @@ export interface Messages {
     viewArchive: string;
     descriptions: Record<string, string>;
   };
+  studio: {
+    heading: string;
+    intro: string;
+    body: string;
+    cta: string;
+    building: string;
+  };
   contact: {
     preHeading: string;
     heading: string;
     body: string;
     linkedin: string;
     github: string;
+    x: string;
     location: string;
     credit: string;
   };
@@ -59,6 +68,7 @@ export interface Messages {
   social: {
     githubLabel: string;
     linkedinLabel: string;
+    xLabel: string;
     getInTouch: string;
   };
 }

@@ -3,13 +3,14 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
+    "studio": "Studio",
     "contact": "Contact",
     "resume": "Resume"
   },
   "hero": {
     "greeting": "Hi, my name is",
     "tagline": "I build things for the web.",
-    "summary": "I build scalable full-stack web applications. With 8+ years of experience across enterprise environments in pharma, aviation, and financial services, I specialize in crafting high-performance systems using modern technologies.",
+    "summary": "I build scalable full-stack web applications. With 8+ years across enterprise teams in pharma, aviation, and financial services, I focus on fast, reliable systems that hold up in production.",
     "currentRole": "Currently at",
     "cta": "Check out my work"
   },
@@ -18,9 +19,9 @@
     "techIntro": "Here are some technologies I've been working with:",
     "skillsHeading": "Technical Skills",
     "paragraphs": [
-      "I'm a Senior Software Engineer who enjoys building things that live on the web. I've been learning programming since I was 14, and after graduating from university in Waterford, Ireland in 2016, I started my career at Fenergo in Dublin as a Software Engineer in Test — which quickly evolved into full-stack development.",
-      "In 2017 I moved to Gdynia, Poland to pursue more interesting projects as a software engineer. Since then, I've had the privilege of working with major organizations including Novartis, British Council, Lufthansa Systems, and clients like Boeing, Danfoss, and Signal Ocean. My focus these days is on architecting executive dashboards and data pipelines that deliver real-time insights to stakeholders.",
-      "Outside of client work, I'm building Lisovate — a software company creating products that integrate generative AI and autonomous agents into developer and software team workflows. Beyond writing code, I enjoy exploring product ideas, occasionally unwinding with video games, and touching grass whenever possible."
+      "I'm a Senior Software Engineer who enjoys building things that live on the web. I've been learning programming since I was 14, and after graduating from university in Waterford, Ireland in 2016, I started my career at Fenergo in Dublin as a Software Engineer in Test, which quickly turned into full-stack development.",
+      "In 2017 I moved to Gdynia, Poland to pursue more interesting projects as a software engineer. Since then I've worked with organizations like Novartis, British Council, Lufthansa Systems, and clients including Boeing, Danfoss, and Signal Ocean. These days I mostly build executive dashboards and data pipelines that turn messy data into real-time insights people can actually act on.",
+      "Outside of client work, I'm building Lisovate, a solo studio making products that put generative AI and autonomous agents to work in developer and software team workflows. Beyond writing code, I enjoy exploring product ideas, occasionally unwinding with video games, and touching grass whenever possible."
     ]
   },
   "experience": {
@@ -74,17 +75,25 @@
     "otherHeading": "Other Noteworthy Projects",
     "viewArchive": "View Full Project Archive",
     "descriptions": {
-      "Skeech": "Open-source AI design sandbox for developers. Generate React/shadcn/Tailwind components through natural language, iterate with live preview, and export to your projects. Multi-provider support (Claude, OpenAI, Ollama), zero-knowledge security — LLM credentials never touch the server.",
+      "Skeech": "Open-source AI design sandbox for developers. Generate React/shadcn/Tailwind components through natural language, iterate with live preview, and export to your projects. Multi-provider support (Claude, OpenAI, Ollama) and zero-knowledge security, so your LLM credentials never touch the server.",
       "Lisium": "AI-powered product development hub that unifies planning, design, and collaboration. Role-based views (Architect, PO, Developer, Designer, Tester) with AI agents that respond from each perspective. Prompt-driven workspace for user stories, designs, docs, and tasks.",
-      "Zorvid": "LLM-powered product analytics platform. Drop in one script to auto-capture everything — the AI identifies and names page elements, builds visual sitemaps, and lets you query data in plain English. Session replay with AI summaries, funnel analysis with drop-off explanations, and anomaly detection."
+      "Zorvid": "LLM-powered product analytics platform. Drop in one script to auto-capture everything. The AI identifies and names page elements, builds visual sitemaps, and lets you query data in plain English. Session replay with AI summaries, funnel analysis with drop-off explanations, and anomaly detection."
     }
+  },
+  "studio": {
+    "heading": "The Studio",
+    "intro": "Solo software studio",
+    "body": "Lisovate is my solo software studio. I build AI products for developers and software teams, and it's where my current work lives.",
+    "cta": "Visit lisovate.com",
+    "building": "Currently building"
   },
   "contact": {
     "preHeading": "04. What's Next?",
     "heading": "Get In Touch",
-    "body": "I'm currently open to new opportunities and always interested in hearing about exciting projects. Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!",
+    "body": "I'm open to new opportunities and always happy to talk shop. Got a question, want to work together, or just want to say hi? Send me a message.",
     "linkedin": "Connect on LinkedIn",
     "github": "View GitHub",
+    "x": "Follow on X",
     "location": "Based in",
     "credit": "Built with Next.js & Tailwind CSS"
   },
@@ -103,6 +112,7 @@
   "social": {
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn",
+    "xLabel": "X (Twitter)",
     "getInTouch": "Get in touch"
   }
 }

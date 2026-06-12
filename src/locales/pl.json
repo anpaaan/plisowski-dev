@@ -3,13 +3,14 @@
     "about": "O mnie",
     "experience": "Doświadczenie",
     "projects": "Projekty",
+    "studio": "Studio",
     "contact": "Kontakt",
     "resume": "CV"
   },
   "hero": {
     "greeting": "Cześć, nazywam się",
     "tagline": "Tworzę aplikacje webowe.",
-    "summary": "Buduję skalowalne aplikacje full-stack. Z ponad 8-letnim doświadczeniem w środowiskach korporacyjnych w branży farmaceutycznej, lotniczej i finansowej, specjalizuję się w tworzeniu wydajnych systemów z wykorzystaniem nowoczesnych technologii.",
+    "summary": "Buduję skalowalne aplikacje full-stack. Z ponad 8-letnim doświadczeniem w zespołach z branży farmaceutycznej, lotniczej i finansowej skupiam się na szybkich, niezawodnych systemach, które sprawdzają się na produkcji.",
     "currentRole": "Obecnie w",
     "cta": "Zobacz moje projekty"
   },
@@ -18,9 +19,9 @@
     "techIntro": "Technologie, z którymi pracuję na co dzień:",
     "skillsHeading": "Umiejętności techniczne",
     "paragraphs": [
-      "Jestem Senior Software Engineerem, który lubi tworzyć rzeczy żyjące w sieci. Programowania uczę się od 14. roku życia, a po ukończeniu studiów w Waterford w Irlandii w 2016 roku rozpocząłem karierę w Fenergo w Dublinie jako Software Engineer in Test — co szybko przerodziło się w rozwój full-stack.",
-      "W 2017 roku przeprowadziłem się do Gdyni, aby realizować ciekawsze projekty jako software engineer. Od tego czasu miałem przyjemność współpracować z dużymi organizacjami, w tym Novartis, British Council, Lufthansa Systems, oraz klientami takimi jak Boeing, Danfoss i Signal Ocean. Obecnie skupiam się na projektowaniu dashboardów analitycznych i pipeline'ów danych dostarczających insighty w czasie rzeczywistym.",
-      "Poza pracą dla klientów, buduję Lisovate — firmę tworzącą produkty integrujące generatywną AI i autonomicznych agentów w workflow zespołów deweloperskich. Poza pisaniem kodu, lubię szukać nowych pomysłów na produkty, od czasu do czasu pograć w gry i spędzać czas na świeżym powietrzu, kiedy tylko się da."
+      "Jestem Senior Software Engineerem, który lubi tworzyć rzeczy żyjące w sieci. Programowania uczę się od 14. roku życia, a po ukończeniu studiów w Waterford w Irlandii w 2016 roku rozpocząłem karierę w Fenergo w Dublinie jako Software Engineer in Test, co szybko przerodziło się w rozwój full-stack.",
+      "W 2017 roku przeprowadziłem się do Gdyni, aby realizować ciekawsze projekty jako software engineer. Od tego czasu współpracowałem z organizacjami takimi jak Novartis, British Council, Lufthansa Systems oraz klientami jak Boeing, Danfoss i Signal Ocean. Obecnie najczęściej buduję dashboardy analityczne i pipeline'y danych, które zamieniają chaotyczne dane w insighty, na podstawie których da się działać.",
+      "Poza pracą dla klientów buduję Lisovate, solowe studio tworzące produkty, które wykorzystują generatywną AI i autonomicznych agentów w pracy deweloperów i zespołów software'owych. Poza pisaniem kodu lubię szukać nowych pomysłów na produkty, od czasu do czasu pograć w gry i spędzać czas na świeżym powietrzu, kiedy tylko się da."
     ]
   },
   "experience": {
@@ -74,17 +75,25 @@
     "otherHeading": "Pozostałe projekty",
     "viewArchive": "Zobacz pełne archiwum projektów",
     "descriptions": {
-      "Skeech": "Open-source'owy sandbox do projektowania AI dla deweloperów. Generuj komponenty React/shadcn/Tailwind w języku naturalnym, iteruj z podglądem na żywo i eksportuj do swoich projektów. Wsparcie wielu providerów (Claude, OpenAI, Ollama), zero-knowledge security — dane uwierzytelniające LLM nigdy nie trafiają na serwer.",
+      "Skeech": "Open-source'owy sandbox do projektowania AI dla deweloperów. Generuj komponenty React/shadcn/Tailwind w języku naturalnym, iteruj z podglądem na żywo i eksportuj do swoich projektów. Wsparcie wielu providerów (Claude, OpenAI, Ollama) i zero-knowledge security, więc dane uwierzytelniające LLM nigdy nie trafiają na serwer.",
       "Lisium": "Hub do rozwoju produktów oparty na AI, łączący planowanie, projektowanie i współpracę. Widoki oparte na rolach (Architekt, PO, Developer, Designer, Tester) z agentami AI odpowiadającymi z każdej perspektywy. Workspace sterowany promptami do user stories, designów, dokumentacji i zadań.",
-      "Zorvid": "Platforma analityki produktowej oparta na LLM. Dodaj jeden skrypt, aby automatycznie zbierać wszystko — AI identyfikuje i nazywa elementy strony, buduje wizualne mapy witryny i pozwala odpytywać dane w języku naturalnym. Replay sesji z podsumowaniami AI, analiza lejków z wyjaśnieniami drop-offów i wykrywanie anomalii."
+      "Zorvid": "Platforma analityki produktowej oparta na LLM. Dodaj jeden skrypt, aby automatycznie zbierać wszystko. AI identyfikuje i nazywa elementy strony, buduje wizualne mapy witryny i pozwala odpytywać dane w języku naturalnym. Replay sesji z podsumowaniami AI, analiza lejków z wyjaśnieniami drop-offów i wykrywanie anomalii."
     }
+  },
+  "studio": {
+    "heading": "Studio",
+    "intro": "Solowe studio software'owe",
+    "body": "Lisovate to moje solowe studio software'owe. Buduję produkty AI dla deweloperów i zespołów software'owych, i to tutaj żyją moje obecne projekty.",
+    "cta": "Odwiedź lisovate.com",
+    "building": "Obecnie tworzę"
   },
   "contact": {
     "preHeading": "04. Co dalej?",
     "heading": "Skontaktuj się",
-    "body": "Jestem otwarty na nowe możliwości i zawsze chętnie dowiaduję się o ciekawych projektach. Niezależnie czy masz pytanie, chcesz współpracować, czy po prostu się przywitać — śmiało napisz!",
+    "body": "Jestem otwarty na nowe możliwości i zawsze chętnie pogadam o projektach. Masz pytanie, chcesz nawiązać współpracę albo po prostu się przywitać? Napisz do mnie.",
     "linkedin": "Połącz się na LinkedIn",
     "github": "Zobacz GitHub",
+    "x": "Obserwuj na X",
     "location": "Lokalizacja:",
     "credit": "Zbudowane z Next.js i Tailwind CSS"
   },
@@ -103,6 +112,7 @@
   "social": {
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn",
+    "xLabel": "X (Twitter)",
     "getInTouch": "Napisz do mnie"
   }
 }
